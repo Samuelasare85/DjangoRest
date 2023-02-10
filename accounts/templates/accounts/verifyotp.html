@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Account Verification</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+        <style>
+
+        </style>
+    </head>
+
+    <body style="margin: 0; font-family: sans-serif;">
+      <div class="main" style="background-color: #FDF5F2; max-width: 650px; height: 620px; border-radius: 8px; padding-bottom: 20px;">
+
+        <div style="background-color: #DD5928; height: 200px; padding-top: 40px; border-radius: 8px 8px 0 0;
+          background-image: url('https://arms-enterprise-assets.s3.eu-west-1.amazonaws.com/assets/template-header.png');
+          background-size: 100% 100%;">
+
+          <div style="background-color: #ffffff;border-radius: 8px; width: 85%; margin: auto; text-align: center ">
+            <div class="header2" style="max-width: 600px;padding: 30px 0;border-bottom: 1px solid rgb(192, 189, 195);">
+              <img src="https://arms-enterprise-assets.s3.eu-west-1.amazonaws.com/assets/amalitech-logo.png" alt="Amalitech-logo" style="width: 50%";> 
+            </div>
+            <p class="left" style="font-family: 'work-sans', sans-serif;font-style: normal;font-weight: 400;margin-left: 30px;text-align: start;line-height: 24px;font-size: 15px;padding: 5px 0 16px;color: #474d66;width: 400px;margin: auto;">Hi {{user.name}},</p>
+            <p style="font-family: 'work-sans', sans-serif;font-style: normal;font-weight: 400;line-height: 24px;font-size: 16px;padding: 5px 0 15px;color: #474d66;width: 400px;margin: auto;text-align: start;"> A new account has been created for you on ARMS and you have been assigned a new temporary password.</p>
+            <p style="font-family: 'work-sans', sans-serif;font-style: normal;font-weight: 400;line-height: 24px;font-size: 16px;padding: 5px 0 15px;color: #474d66;width: 400px;margin: auto;text-align: start;">
+              Your otp is {{user.otp}}
+            </p>
+            <p style="font-family: 'work-sans', sans-serif;font-style: normal;font-weight: 400;line-height: 24px;font-size: 16px;padding: 5px 0 15px;color: #474d66; width: 400px;margin: auto;text-align: start;">
+              In order to secure your account, you will need to change your password when you log in for the first time.
+            </p>
+            <p style="font-family: 'work-sans',sans-serif;font-style: normal;font-weight: 400;line-height: 24px;font-size: 16px;padding: 5px 0 15px;color: #474d66;width: 400px;margin: auto;text-align: start;">
+              Click on the link below to get started.
+            </p>
+          <a href="${emailConstants.baseUrl}/create-password?token=${token}" cursor: pointer>
+          <button type="button" style="font-family: 'work-sans',sans-serif;font-weight: 400;font-size: 16px;
+            padding: 8px 24px; background-color: #DD5928; color: white; border-radius: 8px; border-style: none;">
+              Get started
+            </button> 
+          </a>
+            
+            <p style="font-family: 'work-sans', sans-serif;font-style: normal;font-weight: 400;line-height: 24px;font-size: 16px;padding: 5px 0 15px;color: #474d66;width: 400px;margin: auto;text-align: start;">
+                If you are not sure why you are receiving this email, please contact us at <em>samuelasare859@gmail.com</em>.
+            </p>
+            <p style="font-family: 'work-sans', sans-serif; font-style: normal; font-weight: 400;margin-left: 30px;text-align: start;line-height: 24px;font-size: 16px;padding: 5px 0 15px;color: #474d66;width: 400px; margin: auto;">
+              ARMS Team
+            </p>           
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
