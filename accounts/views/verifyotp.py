@@ -15,6 +15,8 @@ class VerifyOTPView(APIView):
             if not user:
                 return Response({'status:': 'error', 'data': {f'message': 'User with email {email} does not exist'}}, status=status.HTTP_400_BAD_REQUEST)
             elif user.otp == otp:
+                user.is_verified = True
+                user.save()
                 return Response({'status': 'success', 'data': {'message': 'OTP verified and account is created'}}, status=status.HTTP_200_OK)
         except Exception as error:
            raise  AuthenticationFailed(str(error))

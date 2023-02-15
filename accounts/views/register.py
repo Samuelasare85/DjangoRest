@@ -48,11 +48,7 @@ class RegisterView(APIView):
             'id': user.id,
             'name': user.name,
             'email': user.email,
-            'phone_number': user.phone_number,
-            'is_superuser': user.is_superuser,
-            'date_joined': user.date_joined,
-            'updated_at': user.updated_at,
-            'is_active': user.is_active
+            'phone_number': user.phone_number
             }
             
             email_notification(email)
